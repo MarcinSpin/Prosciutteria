@@ -2,25 +2,40 @@
   padding: 0;
   margin: 0;
 }
+/*ie 11 hack for jumpy background-attachment:fixed*/
+html{
+  overflow: hidden;
+  height: 100%;    
+}
+body{
+  overflow: auto;
+  height: 100%;
+}
+
+.test{
+  color: white
+}
 
 header{
   display:flex;
 
 }
 .navbar {
-  background-color:white;
+  background-color:rgb(39, 53, 42);
   height:70px;
   display:flex;
   width:100%;
   align-items:center;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 .navbar__logo{
   display:flex;
 }
 .navbar__logo--img{
-  height:60px;
+  height: 77px;
+  margin-top: 24%;
+  margin-left: 16%;
 }
 .navbar__menu{
   list-style-type: none;
@@ -43,10 +58,20 @@ header{
 }
 .article-first {
   height: 100vh; 
+  position: relative;
+}
 
+.headline{
+  background-color: #EDD65F;
+  width: 58%;
+  height: 28%;
+  position: absolute;
+  left: 30%;
+  top: 42%;
+  z-index: 2;
 }
 .article-first__paralax {
-  background-image: url('http://wallpaperscraft.ru/image/mezhdunarodnyj_den_lesa_vsemirnyj_den_zashchity_lesov_priroda_leto_pejzazh_hdr_93600_1920x1080.jpg');
+  background-image: url('img/article-first.jpg');
   display: flex;
   height: 100%; 
   background-attachment: fixed;
@@ -54,6 +79,8 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   opacity:0.5;
+ 
+ 
 }
 
 .aside-socialmedia__icons{
@@ -71,6 +98,7 @@ header{
 .article-second{
   min-height: 40vh;
   background-color: #d5dad5;
+  position: relative;
 }
 
 
@@ -99,11 +127,34 @@ header{
 .box3{
   min-height: 250px;
   width: 100%;
-  background-image: url('http://wallpaperscraft.ru/image/mezhdunarodnyj_den_lesa_vsemirnyj_den_zashchity_lesov_priroda_leto_pejzazh_hdr_93600_1920x1080.jpg');
+  background-image: url('img/box1.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
+}
+.box33{
+  min-height: 250px;
+  width: 100%;
+  background-image: url('img/box2.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+.box333{
+  min-height: 250px;
+  width: 100%;
+  background-image: url('img/box3.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+}
+.box4{
+  background-color: #F2F2F2;
+  min-height: 250px;
+  width: 100%;
 }
 
 .col2{
@@ -115,19 +166,10 @@ header{
   max-width: 49%;
   margin: 10px;
 }
-.box2{
-  background-color: #EDD65F;
-  min-height: 250px;
-  width: 100%;
-}
-.box3{
-  min-height: 250px;
-  width: 100%;
-  background-image: url('http://wallpaperscraft.ru/image/mezhdunarodnyj_den_lesa_vsemirnyj_den_zashchity_lesov_priroda_leto_pejzazh_hdr_93600_1920x1080.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;  
+.row3{
+  flex: 25%;
+  max-width: 25%;
+  margin: 10px;
 }
 
 .footer{
