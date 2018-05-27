@@ -93,11 +93,29 @@
           <div class="box4"></div>
         </div>
       </div>
-    </div>    
+    </div>   
+    <div id="map" class="googlemap">test </div> 
     <footer class="footer">
       <p>Footer</p>
     </footer>
-       <div class="test">test </div>
+       
+<!-- GOOGLE map-->
 
+<script>
+    function initMap() {
+      var Prosciutteria = {lat: 52.235159, lng: 21.032372};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: Prosciutteria
+      });
+      var marker = new google.maps.Marker({
+        position: Prosciutteria,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuAX-n4-xaPx8UaXqitATWq5L5LtJwqqA&callback=initMap">
+  </script>
 	</body>
 </html>
