@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   </head>
 
 
 	<body>
     <header>
       <nav class="navbar">
-        <div class="navbar__logo"><img src="img/logo2.png" class="navbar__logo--img"></div>
+        <div class="navbar__logo"><img src="img/logo2-wb.png" class="navbar__logo--img"></div>
         <div id="menuToggle" class="navbar__menu">
           <p class="menu-label">Menu</p>
             <input type="checkbox">
@@ -24,10 +25,10 @@
                 <span></span>
                 <span></span>
         <ul class="navbar__menu" id="menu">
-          <li><a class="navbar__menu--links bounce" href="#">home</a></li>
-          <li><a class="navbar__menu--links"href="#">o nas</a></li>
-          <li><a class="navbar__menu--links"href="#">produkty</a></li>
-          <li><a class="navbar__menu--links"href="#">kontakt</a></li>
+          <li><a class="navbar__menu--links bounce" href="#" id="click1">home</a></li>
+          <li><a class="navbar__menu--links" href="#" id="click2">o nas</a></li>
+          <li><a class="navbar__menu--links" href="#" id="click3">produkty</a></li>
+          <li><a class="navbar__menu--links" href="#" id="click4">kontakt</a></li>
         </ul>
         </div>
       </nav>
@@ -41,17 +42,17 @@
       </div>
     </aside>
 
-    <article class="article-first">
+    <article class="article-first" id="div1">
         <div class="article-first__headline"><h1 class="article-first__headline--h1 animated fadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit<span>.</span></h1></div>
       <div class="article-first__paralax"></div>
     </article>
     
-    <article class="article-second">
+    <article class="article-second" id="div2">
       <div class="article-second__headline"><h1 class="article-second__headline--h1">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1></div>
       <p class="article-second__headline--p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus iaculis augue ut elementum. Donec vehicula sollicitudin varius. Mauris dictum fermentum eros vitae viverra. Sed eu eleifend lacus. Vestibulum a lacinia dui, eget porttitor nibh. Sed libero urna, dignissim sed nisi ut, suscipit lobortis enim. Fusce luctus velit turpis. Praesent sed justo odio. Nam sollicitudin arcu vel viverra tincidunt. Duis pulvinar ullamcorper congue. Etiam sit amet nisi ac massa ultricies tempus. Sed semper, augue bibendum gravida scelerisque, leo mi facilisis lacus, sagittis blandit lorem erat non urna.</p>
     </article>
 
-    <div class="gallery">
+    <div class="gallery" id="div3">
       
       <div class="col1">
         <div class="row3boxes">
@@ -101,9 +102,11 @@
         </div>
       </div>
     </div>   
-    <div id="map" class="googlemap">test </div> 
-    <footer class="footer">
-      <p>Footer</p>
+    <div id="map" class="googlemap"> </div> 
+    <footer class="footer" id="div4">
+        <div class="footerlight"><h2>Footer</h2></div>
+      
+      <div class="footerdark"><h2>Footer</h2></div>
     </footer>
        
 <!-- GOOGLE map-->
@@ -113,7 +116,87 @@
       var Prosciutteria = {lat: 52.235159, lng: 21.032372};
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
-        center: Prosciutteria
+        center: Prosciutteria,
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
       });
       var marker = new google.maps.Marker({
         position: Prosciutteria,
@@ -124,5 +207,31 @@
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuAX-n4-xaPx8UaXqitATWq5L5LtJwqqA&callback=initMap">
   </script>
+
+
+<script>
+  $(document).ready(function() {
+      $("#click3").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#div3").offset().top
+          }, 1000);
+      });
+      $("#click2").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#div2").offset().top
+          }, 1000);
+      });
+      $("#click1").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#div1").offset().top
+          }, 1000);
+      });
+      $("#click4").click(function() {
+          $('html, body').animate({
+              scrollTop: $("#div4").offset().top
+          }, 1000);
+      });
+  });
+</script>
 	</body>
 </html>

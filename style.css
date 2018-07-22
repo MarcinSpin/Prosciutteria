@@ -4,7 +4,7 @@
 }
 /*ie 11 hack for jumpy background-attachment:fixed*/
 html{
-  overflow: hidden;
+  /*overflow: hidden;
   height: 100vh; 
   /*font-family: "Didot";*/
   font-family: 'Roboto', sans-serif;
@@ -27,15 +27,18 @@ header{
   display:flex;
 
 }
+a#click4{
+  color: #FF5722;
+}
 .navbar {
-  background-color:white;
+  background-color:#461D1D;
   height:70px;
   display:flex;
   width:100%;
   align-items:center;
   position: fixed;
   z-index: 3;
-  border-bottom: 2px solid;
+  border-bottom: 3px solid white;
 }
 .navbar__logo{
   display:flex;
@@ -56,7 +59,7 @@ header{
   text-decoration: none;
   font-size: 1.15rem;
   text-transform: uppercase;
-  color: #e58e26;
+  color: white;
   font-weight: 600;
   font-family: 'Dancing Script', cursive;
   padding-top:1%;
@@ -70,7 +73,7 @@ header{
 .aside-socialmedia {
   position: fixed;
   display: flex;
-  background-color: white;
+  background-color: #461D1D;
   width: 5%;
   margin-top: 70px;
   height: calc(100% - 70px);
@@ -94,7 +97,7 @@ header{
 }
 .article-first__headline--h1{
   font-family: 'Dancing Script', cursive;
-  color:#e58e26;
+  color:black;
   font-size: 3.8rem;
 }
 .article-first__headline--h1 span{
@@ -103,10 +106,15 @@ header{
   
   font-size: 5.4rem;
 }
-
+.spankropka{
+  position: absolute;
+  top: -26px;
+  color: #FF5722;
+  font-size: 5.4rem;
+}
 
 .article-first__paralax {
-  background-image: url('img/article-first.jpg');
+  background-image: url('img/theme.jpg');
   display: flex;
   height: 100vh; 
   background-attachment: fixed;
@@ -130,6 +138,7 @@ header{
   margin: auto;
   margin-top: 100%;
   opacity: 0.6;
+  color: white;
 }
 
 .article-second{
@@ -139,7 +148,7 @@ header{
 }
 .article-second__headline--h1{
   font-family: 'Dancing Script', cursive;
-  color: #e58e26;
+  color: #white;
   font-weight: 600;
   font-size: 2.8rem;
   text-align: center;
@@ -152,6 +161,7 @@ header{
   text-align: center;
   padding: 4%;
   line-height: 1.6;
+  padding-right: 10%;
 }
 
 
@@ -159,6 +169,7 @@ header{
   display: flex;
   padding: 0 4px;
   height: 50vh;
+  
 }
 .row3boxes{
   flex-direction: row;
@@ -174,7 +185,7 @@ header{
   background-repeat: no-repeat;
 }
 .box2 , .box5 , .box9{
-  background-color: #f8c291;
+  background-color: #6C2F2E;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -194,6 +205,7 @@ header{
   display: flex;
   padding: 0 4px;
   height: 38vh;
+  
 }
 .row2boxes{
   flex: 49%;
@@ -210,7 +222,7 @@ header{
 }
 
 .box6{
-  background-color: #f8c291;
+  background-color: #6C2F2E;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -249,7 +261,7 @@ header{
   background-size: cover;
 }
 .box11{
-  background-color: #f8c291;
+  background-color:#6C2F2E;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -268,11 +280,30 @@ header{
 }
 
 .footer{
-  background-color: #e58e26;
+  background-color: #461D1D;
   width: 100%;
   height: 100px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  margin: auto;
+  display: flex;
+  border-top: 3px solid white;
+  flex-direction: column;
 }
-
+.footerdark{
+  
+  background-color: #232323;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+}
+.footerlight{
+  height: 80px;
+  padding-top: 24px;
+}
 .googlemap {
   width: 100%;
   height: 40vh;
@@ -297,6 +328,7 @@ header{
   left: 50px;
   font-size: 20px;
   display: block;
+  color: white;
 }
 
 a
@@ -443,13 +475,46 @@ a:hover
 .col1, .col3 ,.col4{
   flex-direction: column;
   height: 76vh;
+  width: 90%;
+}
+.col2{
+  width: 88%;
 }
 .navbar__logo--img {
-  height: 45px;
-  margin-top: 6%;
-  margin-left: 10%;
+  height: 60px;
+    margin-left: 10%;
+    margin-top: 40px;
+}
+.navbar {
+  
+  height: 50px;
 }
 .aside-socialmedia {
- 
   width: 10%;
+  margin-top: 50px;
+  height: calc(100% - 50px);
+}
+.article-first__paralax, .box4, .box7, .box3{
+  background-attachment: scroll;
+}
+.box5{
+  padding-left: 16%;
+}
+.article-first__headline {
+  top: 35%;
+}
+.article-second__headline--p {
+  width: 84%;
+}
+.article-second__headline--h1 {
+  padding: 3%;
+  margin-top: 8%;
+  width: 86%;
+}
+.navbar__menu--links{
+  color: black;
+}
+.spankropka{
+  display: none;
+}
 }
