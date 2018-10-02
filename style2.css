@@ -1,0 +1,644 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+  
+  body {
+    overflow: auto;
+    height: 100vh;
+  }
+  
+  @font-face {
+    font-family: 'Didot';
+    src: url('Didot.ttf');
+  }
+  
+  @font-face {
+    font-family: 'belluga';
+    src: url('font/belluga.ttf');
+  }
+  
+  #menuToggle >input {
+      display: none;
+  }
+  
+  header {
+    display: flex;
+  }
+  
+  a#click4 {
+    color: #FF5722;
+  }
+  
+  .navbar {
+    background-color: #461D1D;
+    height: 52px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    border-bottom: 3px solid white;
+  }
+  
+  .owners {
+    height: 410px;
+    padding: 35px;
+  }
+  
+  .owners::before {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+  }
+  
+  .opacity-test {
+    opacity: 0.6;
+    background-color: white;
+  }
+  
+  .navbar__logo {
+    display: flex;
+  }
+  
+  .navbar__logo--img {
+    height: 80px;
+    margin-top: 40px;
+    margin-left: 26%;
+  }
+  
+  .navbar__menu {
+    list-style-type: none;
+    display: flex;
+    flex: 65vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .navbar__menu--links {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 1%;
+  }
+  
+  .navbar__menu--links:hover {
+    color: #f6b93b;
+  }
+  
+  .aside-socialmedia {
+    position: fixed;
+    display: flex;
+    background-color: #461D1D;
+    width: 5%;
+    margin-top: 52px;
+    height: calc(100% - 52px);
+    align-items: center;
+    z-index: 2;
+    right: 0px;
+  }
+  
+  .article-first {
+    height: 100%;
+    position: relative;
+  }
+
+  .article-first, .article-second, .col1, .col2, .col3, .col4, footer, .googlemap {
+    width: 95%;
+  }
+
+  .galery h2{
+    font-family: belluga;
+  }
+  .article-first__headline {
+    width: 58%;
+    height: 28%;
+    position: absolute;
+    left: 30%;
+    top: 28%;
+    z-index: 2;
+  }
+  
+  .article-first__headline--h1 {
+    color: black;
+    font-size: 2.4rem;
+    font-family: 'belluga', cursive;
+  }
+  
+  .article-first__headline--h1 span {
+    color: #FF5722;
+    font-size: 2.4rem;
+  }
+  
+  .spankropka {
+    position: absolute;
+    top: -26px;
+    color: #FF5722;
+    font-size: 5.4rem;
+  }
+  
+  .dummy {
+    height: 10vh;
+  }
+  
+  .article-first__paralax {
+    display: flex;
+  }
+  
+  .article-first__paralax:before {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-image: url('img/deska-smakow-prosciutteria.jpg');
+    background-size: cover;
+    z-index: -4;
+    opacity: 0.6;
+  }
+  
+  .aside-socialmedia__icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  .aside-socialmedia__icons>a >i {
+    font-size: 35px;
+    margin: auto;
+    margin-top: 100%;
+    opacity: 0.8;
+    color:white;
+    
+    border-radius: 8px;
+  }
+  
+  .article-second {
+    min-height: 65vh;
+    background-color: white;
+  }
+  
+  .article-second__headline--h1 {
+    font-family: 'belluga', cursive;
+    background-color: white;
+    font-weight: 600;
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 1%;
+    margin-top: -2%;
+    opacity: 0.92;
+  }
+  
+  .article-second__headline--p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.6;
+    background-color: white;
+    opacity: 0.92;
+    padding: 15px;
+  }
+  
+  .gallery {
+    background-color: antiquewhite;
+  }
+  .gallery h2{
+    font-family: 'belluga';
+  }
+  .col1,
+  .col3 {
+    display: flex;
+    padding: 0 4px;
+    height: 40vh;
+  }
+  
+  .row3boxes {
+    flex-direction: row;
+    flex: 33%;
+    max-width: 33%;
+    margin: 10px;
+  }
+  
+  .box1 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-szynka.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .box2,
+  .box5,
+  .box9 {
+    background-color: #6C2F2E;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    outline: 5px solid white;
+    outline-offset: -20px;
+  }
+  
+  .box3 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-szynka-wedzona.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .col2,
+  .col4 {
+    display: flex;
+    padding: 0 4px;
+    height: 33vh;
+  }
+  
+  .row2boxes {
+    flex: 49%;
+    max-width: 49%;
+    margin: 10px;
+  }
+  
+  .box4 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-powisle.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .box6 {
+    background-color: #6C2F2E;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    outline: 5px solid white;
+    outline-offset: -20px;
+  }
+  
+  .box7 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-ser.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .box16 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-toast.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .box8 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-parmezan.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .box15 {
+    background-color: #6C2F2E;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    outline: 5px solid white;
+    outline-offset: -20px;
+  }
+  
+  .box13 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-ciao.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .box14 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-deska.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .row4boxes {
+    flex: 25%;
+    max-width: 25%;
+    margin: 10px;
+  }
+  
+  .box99 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-ciastko.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .box11 {
+    background-color: #6C2F2E;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    outline: 5px solid white;
+    outline-offset: -20px;
+  }
+  
+  .box12 {
+    height: 100%;
+    background-image: url('img/Prosciutteria-wino.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .footer {
+    background-color: #461D1D;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+  }
+  
+  .footerdark {
+    z-index: 2;
+    background-color: #232323;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 34px;
+  }
+  
+  .footerdark >h2 >a{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    
+    font-family: 'Dancing Script', cursive;
+    padding-top: 1%;
+  }
+  .footerlight >h2>a{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    
+    font-family: 'Dancing Script', cursive;
+  }
+  .footerlight {
+    padding-top: 8px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .googlemap {
+    width: 95%;
+    height: 45vh;
+    border: solid 5px white;
+  }
+  
+  .menu-label {
+    display: none;
+  }
+  
+  .navbar__menu--links {
+    text-decoration: none;
+    font-size: 1.55rem;
+  }
+  
+  @media (max-width: 580px) {
+    html {
+      font-size: 10px;
+    }
+  
+    /*Hamburger*/
+    .menu-label {
+      position: absolute;
+      top: -2px;
+      left: 50px;
+      font-size: 20px;
+      display: block;
+      color: white;
+    }
+  
+    a {
+      text-decoration: none;
+      color: #232323;
+      transition: color 0.3s ease;
+    }
+  
+    a:hover {
+      color: tomato;
+    }
+  
+    #menuToggle {
+      display: block;
+      position: relative;
+      top: 8px;
+      left: 41px;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  
+    #menuToggle input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0;
+      
+      z-index: 2;
+     
+      -webkit-touch-callout: none;
+    }
+  
+    #menuToggle span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #cdcdcd;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+  
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+  
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  
+    #menuToggle input:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+    }
+  
+    #menuToggle input:checked~span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+  
+    #menuToggle input:checked~span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+  
+    #menu {
+        position: absolute;
+        width: 110px;
+        margin: 5px 0px 0 44px;
+        padding: 18px;
+        display: block;
+        background: white;
+        text-align: center;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(150%, 0); 
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+  
+    #menu li {
+      padding: 10px 0;
+      font-size: 22px;
+    }
+  
+    #menuToggle input:checked~ul {
+      transform: none;
+    }
+  
+    .row3boxes,
+    .row4boxes {
+      flex: 100%;
+      max-width: 100%;
+      margin: 5px;
+    }
+  
+    .col1,
+    .col3,
+    .col4 {
+      flex-direction: column;
+      height: 76vh;
+      width: 100%;
+    }
+  
+    .col2 {
+      width: 100%;
+    }
+  
+    .navbar__logo--img {
+      height: 60px;
+      margin-left: 10%;
+      margin-top: 40px;
+    }
+  
+    .navbar {
+      height: 50px;
+    }
+  
+    .aside-socialmedia {
+      width: 10%;
+      margin-top: 50px;
+      height: calc(100% - 50px);
+    }
+  
+    .box5 {
+      padding-left: 1%;
+    }
+  
+    .article-first__headline {
+      width: 65%;
+      height: 40%;
+      position: absolute;
+      left: 23%;
+      top: 28%;
+    }
+  
+    .article-second__headline--h1 {
+      padding: 3%;
+      margin-top: 8%;
+      font-size: 1.8rem;
+    }
+  
+    .frame {
+      width: 100%;
+    }
+  
+    .aside-socialmedia__icons>a >i {
+      font-size: 25px;
+    }
+  
+    .article-first__headline--h1 {
+      padding: 3%;
+      margin-top: 8%;
+      font-size: 2.2rem;
+    }
+  
+    .article-second {
+      min-height: 80vh;
+    }
+  
+    .article-first__headline--h1 span {
+      font-size: 1.4rem;
+    }
+  
+    .navbar__menu--links {
+      color: black;
+    }
+  
+    .spankropka {
+      display: none;
+    }
+    .article-first, .article-second, .col1, .col2, .col3, .col4, footer, .googlemap {
+      width: 90%;
+    }
+  }
